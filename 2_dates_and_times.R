@@ -31,4 +31,14 @@ stuffRogerSaid = function(){
 	x = as.POSIXlt(x)
 	print(x - y)
 
+	# R takes into account leap years
+	x = as.Date("2012-03-01")
+	y = as.Date("2012-02-28")
+	print(x - y)
+
+	#  time difference of 2 dates
+	x = as.POSIXct("2012-10-25 01:00:00")
+	y = as.POSIXct("2012-10-25 06:00:00", tz = "GMT")
+	print(y - x)
+
 }
